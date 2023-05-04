@@ -1,10 +1,22 @@
-@use "../utilities/variables" as *; 
+@use "../utilities/variables" as *;
 @use "../utilities/_mixin" as *;
-.nav{
-background-color: $light-grey;
-&__container{
-    @include flex(space-between, center)
+.nav {
+  background-color: $light-grey;
+  &__container {
+    @include flex(space-between, center);
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      padding: 2em;
+      a {
+        color: $black;
+        &:hover{
+            background-color: $orange;
+        }
+     }
+    }
 }
-
-
 }

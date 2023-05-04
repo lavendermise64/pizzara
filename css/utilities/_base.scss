@@ -1,3 +1,4 @@
+@use "../utilities/variables" as *;
 *{
     margin: 0;
     padding:0;
@@ -12,4 +13,7 @@ text-decoration: none;
 }
 ul{
     list-style: none;
+}
+body{
+    font-family: $font;
 }
