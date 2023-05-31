@@ -1,0 +1,92 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+.menu{
+    &__heading{
+        text-align: center;
+        h3{
+            font-size: 3rem;
+            margin-bottom:1.5em;
+            margin-top: 1em;
+        }
+        
+    }
+    
+    
+    ul{
+        @include flex(space-around,flex-start);
+        margin-top:1em;
+        gap:2em;
+        border-bottom: 2px solid grey;
+        margin-bottom: 10em;
+        
+        
+    
+        }
+        li{
+            font-size: 2rem;
+            border-bottom: 2em solid orange 2px;
+            
+        }
+    &__container{
+        @include flex(space-between,flex-start);
+        margin-top: 3em;
+        margin-bottom: 3em;
+        .view{
+            background-color:$orange;
+            text-align: center;
+            color:$white;
+
+           
+
+        }
+        
+        
+        }
+        
+        
+    span{
+        color: $orange;
+    }
+    &__card{
+
+        background-color: $light-grey;
+        @include flex(center, center, column);
+        padding: 1em;
+        
+
+        }
+        
+
+        &__content{
+            text-align: center;
+            &__button{
+                &--black{
+                    button{
+                    
+                        @include button($white,$black);
+                       
+                    }
+                }
+            
+            }
+        }
+        
+        
+        &__button{
+            &--orange{
+                @include button($white, $orange);
+            }
+        }
+        .active{
+
+    border-bottom:3px solid $orange;
+    color: $orange;
+        }
+       
+    }
+
+    
+    
+    
+    
+

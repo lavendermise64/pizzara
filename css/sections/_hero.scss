@@ -1,51 +1,85 @@
-@use "../utilities/_mixin" as *;
+@use "../utilities/mixins" as *;
 @use "../utilities/variables" as *;
-.hero {
-  &__container {
-    @include flex(space-between, center);
-    gap: 2em;
-    h1 {
-      font-size: 5rem;
-    }
-  }
-  &__left {
-    &--orange {
-      color: $orange;
-    }
+.hero{
+
+&__container{
+    @include flex(space-between,center);
+    gap: 10em;
+    margin-bottom: 3em;
+
+h1{
+    font-size: 5rem;
+    
+}
+}
+
+&__left{
+    &--orange{
+color: $orange;
+    }  
     &__search{
-      @include flex(flex-start, center);
-     border:1px solid black;
-     border-radius: 8px;
-     padding-left: 1em;
-     form{
-        font-size: 0;
-        width: 100%;
-        input[type="text"]{
+        @include flex(flex-start,center);
+        border-radius:5px;
+        border: 1px solid $light-grey;
+        padding-left: 1em;
+
+        form{
+            width: 100%;
+            font-size: 0;
+        }
+        input{
+            border: none;
+            outline: none;
+            padding: 2em;
             width: 80%;
         }
         button{
             width: 20%;
-            padding: 2em;
-            border-top-right-radius: 8px;
-            border-bottom-right-radius: 8px;
+            padding: 2em 0;
+            background: $black;
+            color: $white;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            background-color: $black;
-            color:$white;
         }
-     
+
+        }
+        &__stats {
+@include flex(space-between,center);
+&--grey{
+    @include flex(center,center, column);
+    background-color: $light-grey;
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    margin-top: 3em;
+    p{
+        font-weight: bold;
+    }
+}
+&__img{
+    background-color: $black;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    padding: 1em;
+    margin-bottom: 3em;
+
+}
+
+        }
+        }
  
-}
     }
-}
-  &__left,
-  &__right {
-    flex: 1;
-  }
-  input{
-  padding: 2em;
-      border: none;
-      outline: none;
-    }
-}
+
+    // &__left, &__right{
+    //     flex: 1;
+    
+       
+
+
+  
+
+  
 

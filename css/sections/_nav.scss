@@ -1,5 +1,5 @@
 @use "../utilities/variables" as *;
-@use "../utilities/_mixin" as *;
+@use "../utilities/mixins" as *;
 .nav {
   background-color: $light-grey;
   &__container {
@@ -7,16 +7,55 @@
   }
 
   ul {
-    display: flex;
+    @include flex(space-between, center);
 
     li {
-      padding: 2em;
+    //   padding: 2em;
+      font-size: 20px;
+      position: relative;
+
       a {
-        color: $black;
-        &:hover{
-            background-color: $orange;
+        color: #000;
+        padding: 1em;
+
+        &:hover {
+          background-color: $orange;
+          color: $white;
         }
-     }
+      }
     }
-}
+  }
+  &__right {
+    ul{
+        li:hover{
+            >span:last-child{
+                display:block;
+            }
+        }
+    }
+    &__counter {
+      @include flex(center, center);
+      height: 30px;
+      width: 30px;
+      background-color: orange;
+      border-radius: 50%;
+      position: absolute;
+      top: 20%;
+      right: 20%;
+    }
+    &__empty{
+        background-color: $white;
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        box-shadow: 1px 1px 5px darkgray;
+        min-height: 150px;
+        width: 400px;
+        display:none;
+        padding: 1em;
+    }
+  }
+  
+  
+
 }

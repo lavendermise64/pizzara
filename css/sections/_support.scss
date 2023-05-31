@@ -1,0 +1,37 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+.support{
+
+    margin-top: 10em;
+    margin-bottom: 10em;
+    &__heading{
+        text-align: center;
+        h3{
+            margin-bottom: 2em;
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 3rem;
+        }
+        span{
+            color: $orange;
+        }
+    }
+
+    &__container{
+        @include flex(space-between,column);
+        .container__content{
+            border-radius: 800;
+            background-color: $light-grey;
+            padding: 2em;
+            margin-top: 2em;
+            padding-top: 2em;
+            text-align: center;
+            margin-top: 3em;
+            .image{
+                margin-top: -3em;
+            }
+        }
+        
+    }
+}

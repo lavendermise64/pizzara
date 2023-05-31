@@ -1,0 +1,72 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+.footer{
+    background-color:$black;
+    padding: 2em 0;
+    &__container{
+        // background-color:$black;
+        border-radius: 50;
+        margin-top: 2em;
+        @include flex(space-between,flex-start);
+        margin-top: 2em;
+        h1{
+            color:$white;
+        }
+        h2{
+            color:$white;
+            margin-bottom: 2em;
+            span{
+                color: $orange;
+            }
+        }
+        h3{
+            color: $white;
+            margin: 1.5em 1.5em;
+        }
+        ul{
+            color:$white;
+            text-align: center;
+            
+            li{
+                color: $white;
+                padding: .5em;
+                margin-top: 2em;
+                font-size: 1rem;
+                
+            }
+           .subscribe{
+            margin-top: 1em;
+            padding: 2em;
+            background-color: $orange;
+           }
+           span{
+            color: $orange;
+           } 
+        
+            
+        }
+
+   .content__form{
+    .form{
+        font-size: 0;
+        button{
+            color:white;
+            background-color: $orange;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: none;
+        }
+        input{
+            padding: 2em;
+            border-radius: 5px;
+            border-color: none;
+        }
+    }
+   }
+}
+&__socials{
+    ul{
+        @include flex(space-between,flex-start);    
+    }
+}
+}

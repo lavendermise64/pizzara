@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaara Delivery</title>
+    <link href="css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,43 +19,45 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PIZZARA DELIVERIES</title>
   </head>
+
   <body>
     <header>
       <nav class="nav">
         <div class="container">
           <div class="nav__container">
             <div class="nav__left">
-              <img src="images/logo.svg" alt="logo for pizaara imndustries" />
+              <img src="images/logo.svg" alt="pizzara deliveries logo" />
             </div>
             <div class="nav__center">
               <ul>
-                <li class="__home"><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
-            <div class="herozcontainer">
-              <div class="nav__right"></div>
+            <div class="nav__right">
+             
               <ul>
                 <li>
+                  <span id="counter" class="nav__right__counter">0</span>
                   <img
-                    width="40"
                     src="images/shopping-cart.png"
-                    alt="shopping art icon"
-                  />
+                    alt="this is shopping-cart image"
+                    width="40px"
+                  /> 
+                  <span id="cart-preview"   class="nav__right__empty" >
+                    <h3>Cart</h3>
+                    <p>The cart is empty</p>
+                  </span>
+
                 </li>
                 <li>
                   <img
-                    width="40"
                     src="images/avatar.png"
-                    alt="this is an avater"
+                    alt="this is avatar image"
+                    width="40px"
                   />
                 </li>
                 <li><i class="fa-solid fa-bars-staggered"></i></li>
@@ -58,77 +65,573 @@
             </div>
           </div>
         </div>
-      </nav>
-      <section class="hero">
+      
 
+
+
+      <section cclass="hero">
         <div class="container">
           <div class="hero__container">
-
-      
-  
-        <div class="hero__left">
-          <p><strong>Easy way to order your food</strong></p>
-          <h1>
-            Choosing <span class="hero__left--orange">Healthy</span> &
-            <span class="hero__left--orange">Fresh</span> Pizza
-          </h1>
-          <p>We offer the fastest and favorite pizza delivery services all over the country.
-
-            Search for your favorite pizza toppings here</p>
-          <div class="hero__left__search">
-            <i class="fa-solid fa-magnifying-glass fa-2px"></i>
-            <form action="">
-              <input type="text" placeholder="Find pizza type" />
-              <button type="submit">Search</button>
-            </form>
-          </div>
-          <div class="hero__left__stats">
-            <div class="hero__left__stats--grey">
-              <div>
+            <div class="hero__left">
+              <p><strong>Easy way to order your food</strong></p>
+              <h1>
+                Choosing
+                <span class="hero__left--orange">Healthy</span>&
+                <span class="hero__left--orange">Fresh</span> Pizza
+              </h1>
+              <p>
+                We offer the fastest and favorite pizza delivery services all
+                over the country.Search for your favorite pizza toppings here.
+              </p>
+              <div class="hero__left__search">
+                <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+                <form>
+                  <input type="text" placeholder="Find Pizza Type" />
+                  <button type="submit">Search</button>
+                </form>
+              </div>
+              <div class="hero__left__stats">
+                <div class="hero__left__stats--grey">
+                  <div class="hero__left__stats__img">
+                    <img
+                      src="images/cutlery.png"
+                      alt="this is cutlery image"
+                      width="30px"
+                    />
+                  </div>
+                  <p>500+<br />Restaurants</p>
+                </div>
+                <div class="hero__left__stats--grey">
+                  <div class="hero__left__stats__img">
+                    <img
+                      src="images/varieties.png"
+                      alt="this is afresh pizza  image"
+                      width="30px"
+                    />
+                  </div>
+                  <p>200+<br />Pizza varrieties</p>
+                </div>
+                <div class="hero__left__stats--grey">
+                  <div class="hero__left__stats__img">
+                    <img
+                      src="images/star.png"
+                      alt="this is a star image"
+                      width="30px"
+                    />
+                  </div>
+                  <p>(7.8)<br />10K Reviews</p>
+                </div>
+              </div>
+            </div>
+            <div class="hero__right">
+              <div class="hero__right__large">
                 <img
-                  src="images/cutlery.png"
-                  alt="this are cutleries"
-                  width="40"
+                  src="images/hero-pizza.png"
+                  alt="this is hero pizza image"
                 />
               </div>
-              <p>500+ Restaurants</p>
-            </div>
-            <div class="hero__left__stats--grey">
-              <div>
+              <div class="hero__right__small">
                 <img
-                  src="images/fresh-pizza.png"
-                  alt="pizza"
-                  width="40"
-                  width="40"
+                  src="images/pizza-1.png"
+                  alt="this is pizza 1 image"
+                  width="100px"
+                  height="100px"
+                />
+                <img
+                  src="images/pizza-2.png"
+                  alt="this is pizza-2 image"
+                  width="100px"
+                  height="100px"
+                />
+                <img
+                  src="images/pizza-3.png"
+                  alt="this is pizza 3 image"
+                  width="100px"
+                  height="100px"
+                />
+                <img
+                  src="images/pizza-4.png"
+                  alt="this is pizza 4 img"
+                  width="100px"
+                  height="100px"
                 />
               </div>
-              <p>200+ Pizza Varieties</p>
-            </div>
-            <div class="hero__left__stats--grey">
-              <div>
-                <img src="images/star.png" alt="this is astar"  width="50"/>
-              </div>
-              <p>(7.8) 10K Reviews</p>
             </div>
           </div>
         </div>
-
-        <div class="hero__right">
-          <div class="hero__right--large">
-            <img src="images/hero-pizza.png" alt="this is a piza" />
-          </div>
-          <div class="hero__right--small">
-            <img src="images/pizza-1.png" width="80"/>
-      <img src="images/pizza-2.png" width="80"/>
-            <img src="images/pizza-3.png" width="80"/>
-            <img src="images/pizza-4.png" width="80"/>
-          </div>
-        </div>
-          </div>
-          
       </section>
     </header>
-    <main></main>
-    <fotter></fotter>
+    <main>
+      <section class="menu">
+        <div class="menu__heading">
+          <h2><span>New in Menu</span></h2>
+          <h3><span class="menu--orange">Special Menu</span> For You</h3>
+        </div>
+        <ul>
+          <li class="select">Chicken Pizza</li>
+          <li class="select">Pepperoni</li>
+          <li class="select">Margherita</li>
+          <li class="select">Hawaiian</li>
+          <li class="select">Meat Lover’s Pizza</li>
+        </ul>
+        <div class="container">
+          <!-- Chicken Pizza -->
+          <div class="menu__container chicken">
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/barbecue-chicken-pizza.png"
+                  alt="this is barbecue image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>BBQ Chicken Pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/tandoori-chicken.png"
+                  alt="this hero pizza"
+                  width="250"
+                />
+              </div>
+
+              <div class="menu__content">
+                <h2>Tandori Chicken Pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/chicken-kebab.png"
+                  alt="pizza 4 image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>Chicken Kebab Pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pepperoni pizza -->
+
+          <div class="menu__container pepperoni">
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/barbecue-chicken-pizza.png"
+                  alt="this is barbecue image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>BBQ Pepperoni pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/tandoori-chicken.png"
+                  alt="this hero pizza"
+                  width="250"
+                />
+              </div>
+
+              <div class="menu__content">
+                <h2>Tandori Pepperoni pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/chicken-kebab.png"
+                  alt="pizza 4 image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>Pepperoni Kebab pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Margherita pizza -->
+
+          <div class="menu__container margherita">
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/barbecue-chicken-pizza.png"
+                  alt="this is barbecue image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>BBQ Margherita pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/tandoori-chicken.png"
+                  alt="this hero pizza"
+                  width="250"
+                />
+              </div>
+
+              <div class="menu__content">
+                <h2>Tandori Margherita pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="Ksh 1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/chicken-kebab.png"
+                  alt="pizza 4 image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>Margherita Kebab pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hawaiian pizza -->
+
+          <div class="menu__container hawaiian">
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/barbecue-chicken-pizza.png"
+                  alt="this is barbecue image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>BBQ Hawaiian pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/tandoori-chicken.png"
+                  alt="this hero pizza"
+                  width="250"
+                />
+              </div>
+
+              <div class="menu__content">
+                <h2>Tandori Hawaiian pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/chicken-kebab.png"
+                  alt="pizza 4 image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>Hawaiian Kebab pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meat lovers pizza -->
+
+          <div class="menu__container meat">
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/barbecue-chicken-pizza.png"
+                  alt="this is barbecue image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>BBQ Meat Lovers Pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/tandoori-chicken.png"
+                  alt="this hero pizza"
+                  width="250"
+                />
+              </div>
+
+              <div class="menu__content">
+                <h2>Tandori Meat Lovers Pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="Ksh 1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+            <div class="menu__card">
+              <div class="card__image">
+                <img
+                  src="images/chicken-kebab.png"
+                  alt="pizza 4 image"
+                  width="250"
+                />
+              </div>
+              <div class="menu__content">
+                <h2>Meat Lovers Kebab Pizza</h2>
+                <p>(Cheese with Shrimp)</p>
+                <h2 data-price="1500">1500</h2>
+                <div class="menu__content__button--black">
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="menu__button--orange">View More</button>
+        </div>
+      </section>
+      <section class="why-us">
+        <div class="container">
+          <div class="why-us__container">
+            <div class="container__left">
+              <img src="images/why-us.png" alt="why-us image" />
+            </div>
+            <div class="container__right">
+              <div class="right__content">
+                <h3><span>Why Us</span></h3>
+                <h2>Why We Are<span> The Best</span></h2>
+                <p>
+                  We always try to maintain our food quality for our
+                  customers.Our customers’ satisfaction is our top priority.
+                </p>
+              </div>
+              <div class="why-us__features">
+                <div class="content__image">
+                  <div class="right__image">
+                    <img
+                      src="images/varieties.png"
+                      alt="fresh pizza image"
+                      width="40"
+                    />
+                  </div>
+                  <div class="right__content">
+                    <h3>Fresh Pizza</h3>
+                    <p>
+                      We make our pizza to suit your needs as we use the best
+                      quality ingredients.
+                    </p>
+                  </div>
+                </div>
+                <div class="content__image">
+                  <div class="right__image">
+                    <img
+                      src="images/fast-delivery.png"
+                      alt="first delivery image"
+                      width="40"
+                    />
+                  </div>
+                  <div class="right__content">
+                    <h3>Fast Delivery</h3>
+                    <p>
+                      Through rapid delivery, we provide a high level of
+                      customer service
+                    </p>
+                  </div>
+                </div>
+                <div class="content__image">
+                  <div class="right__image">
+                    <img
+                      src="images/quality.png"
+                      alt="quality image"
+                      width="40"
+                    />
+                  </div>
+                  <div class="right__content">
+                    <h3>Best Quality</h3>
+                    <p>
+                      Our delivery service that is available at any time and
+                      usually everyday.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="support">
+        <div class="support__heading">
+          <h3><span>Need Any Help</span></h3>
+          <h2><span>Our support Team </span>Is Ready To Assist you</h2>
+        </div>
+        <div class="container">
+          <div class="support__container">
+            <div class="container__content">
+              <div class="image">
+                <img src="images/mail.png" alt="mail image" width="40" />
+              </div>
+              <h3>Email Address</h3>
+              <p>pizaaradeliveries@info.com</p>
+            </div>
+            <div class="container__content">
+              <div class="image">
+                <img
+                  src="images/live-support.png"
+                  alt="live support image"
+                  width="40"
+                />
+              </div>
+              <h3>Live Support</h3>
+              <p>Get live support now</p>
+            </div>
+            <div class="container__content">
+              <div class="image">
+                <img src="images/phone.png" alt="phone image" width="40" />
+              </div>
+              <h3>Phone Number</h3>
+              <p>+2547 11 555 888</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <div class="content">
+            <img src="images/logo_light (1).svg" alt="logo image" />
+            <h3>Stay Connected</h3>
+            <div class="footer__socials">
+              <ul>
+                <li>
+                  <a href=""></a
+                  ><img
+                    src="images/facebook.png"
+                    alt="image of facebook"
+                    width="40px"
+                  />
+                </li>
+                <li>
+                  <a href=""></a
+                  ><img
+                    src="images/instagram.png"
+                    alt="instagram image"
+                    width="40px"
+                  />
+                </li>
+                <li>
+                  <a href=""></a
+                  ><img
+                    src="images/twitter.png"
+                    alt="twitter image"
+                    width="40px"
+                  />
+                </li>
+                <li>
+                  <a href=""></a
+                  ><img
+                    src="images/linkedin.png"
+                    alt="linkedin image"
+                    width="40px"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="container__content">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href=""></a><span>Home</span></li>
+              <li><a href=""></a>About Us</li>
+              <li><a href=""></a>Shop</li>
+              <li><a href=""></a>Contact Us</li>
+            </ul>
+          </div>
+          <div class="container__content">
+            <div class="content__form">
+              <h2>Subscribe To Our Newsletter To Stay Updated</h2>
+              <div class="form">
+                <input type="text" placeholder="email adress" />
+                <button class="subscribe">subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
